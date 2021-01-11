@@ -14,9 +14,15 @@ const record = [
 //each object has two properties YEAR - RESULT
 // use find() to test each objects to see if the result is "W" a win 
 // superbowlWin() should return the year when the win occurred (if it occurred at all!). If no win is found, it should return, sadly, undefined
-function superbowlWin(){
-return record.find(year === "2017");
-console.log(year)
-};
+function superbowlWin(record){
+  let findResult = record.find(function(r){
+   return r.result === "W"
+});
+if (findResult){
+  return findResult.year
+}
+
+ 
+}
 
 
